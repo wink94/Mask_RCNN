@@ -47,7 +47,8 @@ COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
-DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
+LOGS_Dir="/content/drive/My Drive/Weight Files/Mask RCNN/T Shirts'"
+DEFAULT_LOGS_DIR = os.path.join(LOGS_Dir, "logs")
 
 ############################################################
 #  Configurations
