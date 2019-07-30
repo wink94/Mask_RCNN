@@ -67,7 +67,7 @@ class SkirtConfig(Config):
     IMAGES_PER_GPU = 2
 
     # Number of classes (including background)
-    NUM_CLASSES = 1 + 4  # Background + Skirt
+    NUM_CLASSES = 1 + 3  # Background + Skirt
 
     # Number of training steps per epoch
     STEPS_PER_EPOCH = 100
