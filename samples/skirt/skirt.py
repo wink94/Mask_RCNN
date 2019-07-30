@@ -89,8 +89,8 @@ class SkirtDataset(utils.Dataset):
         """
         # Add classes. We have only one class to add.
         self.add_class("skirt", 0, "s1")
-        #self.add_class("skirt", 1, "s2")
-        self.add_class("skirt", 2, "s3")
+        self.add_class("skirt", 1, "s3")
+        # self.add_class("skirt", 2, "s3")
         
 
         # Train or validation dataset?
@@ -140,10 +140,10 @@ class SkirtDataset(utils.Dataset):
             for i in  class_names_str:
                 if i['skirt'] == 's1':
                     class_name_nums.append(0)
-#                if i['skirt'] == 's2':
-#                    class_name_nums.append(1)
                 if i['skirt'] == 's3':
-                    class_name_nums.append(2)
+                    class_name_nums.append(1)
+                # if i['skirt'] == 's3':
+                #     class_name_nums.append(2)
                 
 
             # load_mask() needs the image size to convert polygons to masks.
