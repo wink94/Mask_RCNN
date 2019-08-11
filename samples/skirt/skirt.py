@@ -67,7 +67,7 @@ class SkirtConfig(Config):
     IMAGES_PER_GPU = 2
 
     # Number of classes (including background)
-    NUM_CLASSES = 1 + 2  # Background + Skirt
+    NUM_CLASSES = 1 + 3  # Background + Skirt
 
     # Number of training steps per epoch
     STEPS_PER_EPOCH = 100
@@ -90,7 +90,7 @@ class SkirtDataset(utils.Dataset):
         # Add classes. We have only one class to add.
         self.add_class("skirt", 0, "s1")
         self.add_class("skirt", 1, "s3")
-        # self.add_class("skirt", 2, "s3")
+        self.add_class("skirt", 2, "s3")
         
 
         # Train or validation dataset?
@@ -142,8 +142,8 @@ class SkirtDataset(utils.Dataset):
                     class_name_nums.append(0)
                 if i['skirt'] == 's3':
                     class_name_nums.append(1)
-                # if i['skirt'] == 's3':
-                #     class_name_nums.append(2)
+                if i['skirt'] == 's3':
+                    class_name_nums.append(2)
                 
 
             # load_mask() needs the image size to convert polygons to masks.
