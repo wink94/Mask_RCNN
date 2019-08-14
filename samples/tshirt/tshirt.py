@@ -47,7 +47,7 @@ COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_tshirt_0030.h5")
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
-DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
+DEFAULT_LOGS_DIR = os.path.join("/content/drive/My Drive/Weight Files/Mask RCNN/T Shirts")
 
 ############################################################
 #  Configurations
@@ -137,13 +137,13 @@ class TshirtDataset(utils.Dataset):
             class_names_str=[i for i in  class_names_str_temp if bool(i) != False]
 
             for i in  class_names_str:
-                if i['t_shirt'] == 't1':
+                if i['tshirt'] == 't1':
                     class_name_nums.append(0)
-                if i['t_shirt'] == 't2':
+                if i['tshirt'] == 't2':
                     class_name_nums.append(1)
-                if i['t_shirt'] == 't3':
+                if i['tshirt'] == 't3':
                     class_name_nums.append(2)
-                if i['t_shirt'] == 't4':
+                if i['tshirt'] == 't4':
                     class_name_nums.append(3)
 
             # load_mask() needs the image size to convert polygons to masks.

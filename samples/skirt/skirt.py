@@ -56,8 +56,7 @@ DEFAULT_LOGS_DIR = os.path.join(LOGS_Dir, "logs")
 
 
 class SkirtConfig(Config):
-    """Configuration for training on the toy  dataset.
-    Derives from the base Config class and overrides some values.
+    """Configuration for training on the toy  dataset.daand overrides some values.
     """
     # Give the configuration a recognizable name
     NAME = "skirt" 
