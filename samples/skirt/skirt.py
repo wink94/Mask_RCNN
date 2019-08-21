@@ -43,7 +43,7 @@ from mrcnn.config import Config
 from mrcnn import model as modellib, utils
 
 # Path to trained weights file
-COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_skirt_0030.h5")
+COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR,)
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
@@ -89,7 +89,7 @@ class SkirtDataset(utils.Dataset):
         # Add classes. We have only one class to add.
         self.add_class("skirt", 0, "s1")
         self.add_class("skirt", 1, "s3")
-        self.add_class("skirt", 2, "s3")
+        # self.add_class("skirt", 2, "s3")
         
 
         # Train or validation dataset?
@@ -141,8 +141,8 @@ class SkirtDataset(utils.Dataset):
                     class_name_nums.append(0)
                 if i['skirt'] == 's3':
                     class_name_nums.append(1)
-                if i['skirt'] == 's3':
-                    class_name_nums.append(2)
+                # if i['skirt'] == 's3':
+                #     class_name_nums.append(2)
                 
 
             # load_mask() needs the image size to convert polygons to masks.
