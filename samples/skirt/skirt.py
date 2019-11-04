@@ -43,7 +43,7 @@ from mrcnn.config import Config
 from mrcnn import model as modellib, utils
 
 # Path to trained weights file
-COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR,)
+COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR,'mask_rcnn_coco.h5')
 
 # Directory to save logs and model checkpoints, if not provided
 # through the command line argument --logs
@@ -72,7 +72,7 @@ class SkirtConfig(Config):
     STEPS_PER_EPOCH = 100
 
     # Skip detections with < 90% confidence
-    DETECTION_MIN_CONFIDENCE = 0.9
+    DETECTION_MIN_CONFIDENCE = 0.7
 
 
 ############################################################
@@ -216,7 +216,7 @@ def train(model):
     print("Training network heads")
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE,
-                epochs=30,
+                epochs=10,
                 layers='heads')
 
 
