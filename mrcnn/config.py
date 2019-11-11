@@ -86,7 +86,7 @@ class Config(object):
 
     # Non-max suppression threshold to filter RPN proposals.
     # You can increase this during training to generate more propsals.
-    RPN_NMS_THRESHOLD = 0.7
+    RPN_NMS_THRESHOLD = 0.6
 
     # How many anchors per image to use for RPN training
     RPN_TRAIN_ANCHORS_PER_IMAGE = 256
@@ -169,10 +169,10 @@ class Config(object):
 
     # Minimum probability value to accept a detected instance
     # ROIs below this threshold are skipped
-    DETECTION_MIN_CONFIDENCE = 0.7
+    DETECTION_MIN_CONFIDENCE = 0.6
 
     # Non-maximum suppression threshold for detection
-    DETECTION_NMS_THRESHOLD = 0.3
+    DETECTION_NMS_THRESHOLD = 0.2
 
     # Learning rate and momentum
     # The Mask RCNN paper uses lr=0.02, but on TensorFlow it causes
